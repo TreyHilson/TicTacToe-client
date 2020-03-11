@@ -4,7 +4,6 @@ $body-bg-color: $gray-200;
 $font-color: $light;
 $secondary: #b18ee8;
 
-
 body {
   background-color: $body-bg-color;
 }
@@ -19,22 +18,15 @@ body {
   justify-content: center;
 }
 
-.p {
+
+.div {
   text-align: center;
 }
-
-
 
 .alt-color {
   background-color: $alt-color;
 }
 
-
-/*[class*="col-"]{
-    margin-bottom: -99777px;
-    padding-bottom: 99999px;
-    .row{
-        overflow: hidden;
-    }
+.x {
+  background-image: url('img1.png');
 }
-*/
