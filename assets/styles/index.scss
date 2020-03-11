@@ -1,1 +1,40 @@
 @import '~bootstrap/scss/bootstrap';
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+$secondary: #b18ee8;
+
+
+body {
+  background-color: $body-bg-color;
+}
+
+.box {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+
+.p {
+  text-align: center;
+}
+
+
+
+.alt-color {
+  background-color: $alt-color;
+}
+
+
+/*[class*="col-"]{
+    margin-bottom: -99777px;
+    padding-bottom: 99999px;
+    .row{
+        overflow: hidden;
+    }
+}
+*/
