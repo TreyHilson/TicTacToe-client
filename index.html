@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <title>Example</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Do not add `link` tags-->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Do not add `script` tags-->
-  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-
-</head>
-
-<body>
-  <h1>PlaceHolder </h1>
-  <div class="container">
-    <h1> 👹👹👹👹</h1>
-    <div class="row" id="player">
-      <div id='box1' class="col-4  box">
-
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <div class="row border-b">
+        <div class="col border-r"></div>
+        <div class="col border-r"></div>
+        <div class="col"></div>
       </div>
-      <div id='box2' class="col-4  box">
-
+      <div class="row border-b">
+        <div class="col border-r"></div>
+        <div class="col border-r"></div>
+        <div class="col"></div>
       </div>
-      <div id='box3'class="col-4  box">
-
+      <div class="row">
+        <div class="col border-r"></div>
+        <div class="col border-r"></div>
+        <div class="col"></div>
       </div>
-      <div id='box4' class="col-4  box">
-
-      </div>
-      <div id='box5'class="col-4 box">
-
-      </div>
-      <div id='box6'class="col-4 box">
-
-      </div>
-      <div id='box7'class="col-4  box">
-
-      </div>
-      <div id='box8' class="col-4  box">
-
-      </div>
-      <div id='box9' class="col-4 box">
-
-      </div>
-
     </div>
 
+    <p id="message"></p>
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend> SIGN UP </legend>
+          <input type="text" name="credentials[email]" placeholder="user@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+          <input type="submit" value="sign up!">
 
-  </div>
-  <p id="message"></p>
-  <form id="sign-up" class="border">
+        </fieldset>
+      </form>
 
-    SIGN UP
-      <input type="text" name="credentials[email]" placeholder="user@email.com">
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-      <input type="submit" value="sign up!">
-</form>
-<form id="sign-in" class="border">
-  <fieldset>
-    <legend> SIGN IN </legend>
-    <input type="text" name="credentials[email]" placeholder="user@email.com">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-    <input type="submit" value="sign in!">
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend> SIGN IN </legend>
+          <input type="text" name="credentials[email]" placeholder="user@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+          <input type="submit" value="sign in!">
 
 
-  </fieldset>
-</form>
-</body>
+        </fieldset>
+      </form>
 
-</html>
+      <form id="change-password" class="border">
+        <fieldset>
+           CHANGE PASSWORD
+          <input type="text" name="passwords[old]" placeholder="Old password">
+          <input type="password" name="passwords[new]" placeholder="New password">
+          <input type="submit" value="Change Password">
+
+        </fieldset>
+      </form>
+
+      <form id="signout" class="border">
+        <fieldset>
+          <input type="submit" value="Sign Out">
+
+        </fieldset>
+      </form>
+    </body>
+
+  </html>

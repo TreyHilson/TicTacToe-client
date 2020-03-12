@@ -44,18 +44,10 @@ const signOut = function () {
   })
 }
 
-const clickSuccess = function (data) {
-  console.log('In api.js')
-  return $.ajax({
-    url: config.apiUrl + '/',
-    method: 'POST',
-    data
-  })
-}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut,
-  clickSuccess
+  signOut
 }

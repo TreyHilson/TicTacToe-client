@@ -58,14 +58,6 @@ const signOutFailure = function (data) {
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }
-
-const clickSuccess = function (data) {
-  $('#box1').text('SUCCESS 🤓')
-  $('#box1').removeClass()
-  $('#box1').addClass('x')
-  console.log('adding X')
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -74,7 +66,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  clickSuccess
+  signOutFailure
 
 }

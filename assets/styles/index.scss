@@ -1,32 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
-$alt-color: $cyan;
-$body-bg-color: $gray-200;
-$font-color: $light;
-$secondary: #b18ee8;
-
-body {
-  background-color: $body-bg-color;
+.container {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  margin-top: 100px;
 }
 
-.box {
-  align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
-  color: $font-color;
-  display: flex;
-  height: 300px;
-  justify-content: center;
-}
-
-
-.div {
+.container h1 {
   text-align: center;
+  font-size: 50px;
 }
 
-.alt-color {
-  background-color: $alt-color;
+.row {
+  height: 100px;
 }
 
-.x {
-  background-image: url('img1.png');
+.col {
+  height: 100px;
+  width: 100px;
+  float: left;
+  font-size: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.col:hover {
+    background-color: lightgray;
+}
+
+.border-b {
+  border-bottom: 10px solid black;
+}
+
+.border-r {
+  border-right: 10px solid black;
+}
+
+.winner {
+    color: blue;
 }

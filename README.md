@@ -1,68 +1,37 @@
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+# browser-template
 
-## Notes / Workflow
-____________________________________________________
-- A wireframe of what the ame project will look like.
-https://imgur.com/fI3PczM
-https://imgur.com/IV3AGmF
+A template for starting front-end projects. Webpack for `require` system, build
+pipeline, and development server. Boostrap and Handlebars.js included. No
+front-end frameworks included.
 
-- How you will represent the game board in JS.
-As a grid of 9 boxes.
+## Installation
 
-Game board will be represented by using html and event javascript coding.
-Div classes will by tied to mouse over options.
-
-options towards vitory is 8 possibilities.
-
-- How you plan to approach this project.
-
-lowly and be methodical, I plan on utilizing the game project schedule.md to
-prioritize my focuses.
-
-- 4-8 user stories for your game project
-
-`As a < new user >, I want < sign up > so that < I can login >.`
-// Input curl scripts for authentication
-/// create forms with ids for user to sign in.
-
-`As a <player>, I want < start a game > so that < play >.`
-// code mouse over / mouse click options for user to play
-
-`As a < player >, I want < see my action  > so that < keep scrore >.`
-// have field keep users input
-`As a < player >, I want < know if I won > so that < I can celebrate >.`
-// class & event to let user know if won or loss
-
-`As a <player>, I want < have a reset option > so that < I can rage quit / play again >`
-// button that starts a fresh game
-`As a < user>, I want < sign out> so that < I can protect my data >.`
-//sign out forms to log user out
-
-**Note**
-on the signed out wireframe no need for "forgot username"
-keep in mind change password only after the sign in.
-score & reset hidden until signed in as well.
-
-Score is not a requirement , think more number of games vs Ws
-Hidden until logged in would probably be easier.
-
-how to represent in Js , use array with 9 different elements for cells. 
-
-
-
-
-
-
-Resources used:  https://wireframe.cc/ // game-project-scope-study
-
-
-- How you plan to keep your code modular.
--
--
-- What creative spin will you add to your project?
--
-- How will you use version control to backup / track your project?
-- What additional features will you build if you have extra time?
+1. [Download](../../archive/master.zip) this template.
+    - **Do Not Fork And Clone**
+    - Click the "Clone or Download" button and select "Download Zip".
+1. Move to the `wdi/projects` directory, then unzip the template directory with
+    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
+1. Rename the template directory from `browser-template-master` to
+    `<project-name>-client`.
+1. Empty [`README.md`](README.md) and fill with your own content.
+1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
+    your project.
+    - You can search for all instances of text in Atom by pressing
+    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
+1. Move into the new project and `git init`.
+1. Add all of the files in your project with the command `git add --all`.
+      - **Note: This is the only time you should run this command!**
+1. Commit all of your files with the command `git commit`.
+      - Your commit title should read `Initial commit`.
+1. Install dependencies with `npm install`.
+1. Create a new repository on [github.com](https://github.com),
+    _not GitHub Enterprise_.
+1. Name the new repository with the same name used on Step 3.
+1. Follow the instructions on your new repository's setup page. For details on
+   how to push to Github, refer to the section on Github entitled "…or push an existing
+   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
 
 ## Structure
 

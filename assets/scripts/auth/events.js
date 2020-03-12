@@ -39,15 +39,11 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-const onClick = function (event) {
-  console.log('clicking', event.target.id)
-}
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut,
-  onClick
+  onSignOut
 
 }
