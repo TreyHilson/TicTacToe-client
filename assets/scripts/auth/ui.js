@@ -58,6 +58,7 @@ const signOutFailure = function (data) {
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -67,5 +68,6 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
+
 
 }

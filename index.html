@@ -11,66 +11,89 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-    <div class="container">
-      <h1>Tic Tac Toe</h1>
-      <div class="row border-b">
-        <div class="col border-r"></div>
-        <div class="col border-r"></div>
-        <div class="col"></div>
-      </div>
-      <div class="row border-b">
-        <div class="col border-r"></div>
-        <div class="col border-r"></div>
-        <div class="col"></div>
-      </div>
-      <div class="row">
-        <div class="col border-r"></div>
-        <div class="col border-r"></div>
-        <div class="col"></div>
-      </div>
+  <body>
+    <!-- Grid Layout -->
+<h1> Tic Tac Toe</h1>
+    <!-- Grid Layout -->
+
+<div id="container" class="container">
+  <div class="row">
+    <div id="0" class="col-4  col-lg-3 box">
+
     </div>
+    <div id="1" class="col-4  col-lg-3 box">
 
-    <p id="message"></p>
-      <form id="sign-up" class="border">
-        <fieldset>
-          <legend> SIGN UP </legend>
-          <input type="text" name="credentials[email]" placeholder="user@email.com">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-          <input type="submit" value="sign up!">
+    </div>
+    <div id="2" class="col-4  col-lg-3 box">
 
-        </fieldset>
-      </form>
+    </div>
+    <div id="3" class="col-4  col-lg-3 box">
 
-      <form id="sign-in" class="border">
-        <fieldset>
-          <legend> SIGN IN </legend>
-          <input type="text" name="credentials[email]" placeholder="user@email.com">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-          <input type="submit" value="sign in!">
+    </div>
+    <div id="4" class="col-4 col-lg-3 box">
+
+    </div>
+    <div id="5" class="col-4 col-lg-3 box">
+
+    </div>
+    <div id="6" class="col-4  col-lg-3 box">
+
+    </div>
+    <div id="7" class="col-4  col-lg-3 box">
+
+    </div>
+    <div id="8" class="col-4  col-lg-3 box"> </div>
+  </div>
+</div>
 
 
-        </fieldset>
-      </form>
+    <!-- Grid Layout -->
+<div>
+<button id="restart">Reset</button>
+</div>
 
-      <form id="change-password" class="border">
-        <fieldset>
-           CHANGE PASSWORD
-          <input type="text" name="passwords[old]" placeholder="Old password">
-          <input type="password" name="passwords[new]" placeholder="New password">
-          <input type="submit" value="Change Password">
+<p id="message" class="mailman"></p>
+<form id="sign-up" class="border">
+  <fieldset>
+    <legend> SIGN UP </legend>
+    <input type="text" name="credentials[email]" placeholder="user@email.com">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+    <input type="submit" value="sign up!">
 
-        </fieldset>
-      </form>
 
-      <form id="signout" class="border">
-        <fieldset>
-          <input type="submit" value="Sign Out">
+  </fieldset>
+</form>
 
-        </fieldset>
-      </form>
-    </body>
+<form id="sign-in" class="border">
+  <fieldset>
+    <legend> SIGN IN </legend>
+    <input type="text" name="credentials[email]" placeholder="user@email.com">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+    <input type="submit" value="sign in!">
 
-  </html>
+
+  </fieldset>
+</form>
+
+<form id="change-password" class="border">
+  <fieldset>
+    <legend> CHANGE PASSWORD </legend>
+    <input type="text" name="passwords[old]" placeholder="Old password">
+    <input type="password" name="passwords[new]" placeholder="New password">
+    <input type="submit" value="Change Password">
+
+
+  </fieldset>
+</form>
+
+<form id="signout" class="border">
+  <fieldset>
+    <input type="submit" value="Sign Out">
+
+
+  </fieldset>
+</form>
+  </body>
+    </html>
