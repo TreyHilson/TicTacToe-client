@@ -20,6 +20,7 @@ const signInSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#firstView').addClass('hidden')
+    $('#board').removeClass()
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }

@@ -1,7 +1,8 @@
 
 const newGameSuccess = function (data) {
-  console.log('ayeeee', data)
   $('#message').html('New Game Started!')
+  $('#message').removeClass()
+  $('#message').addClass('message')
 }
 
 module.exports = {
