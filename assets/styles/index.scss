@@ -25,6 +25,8 @@ cursor: pointer;
 
 .mailman {
   color: orange;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 
@@ -43,4 +45,9 @@ button {
   padding: 20px;
   font-size: 20px;
   margin-top: 10px;
+}
+
+
+.hidden {
+  display: none;
 }

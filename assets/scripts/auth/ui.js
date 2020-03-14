@@ -19,6 +19,7 @@ const signInSuccess = function (data) {
   $('#message').text('SUCCESS 🤓')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#firstView').addClass('hidden')
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }
@@ -52,7 +53,7 @@ const signOutSuccess = function (data) {
   store.user = data.user
 }
 const signOutFailure = function (data) {
-  $('#message').text('SUCCESS 🤓')
+  $('#message').text('Ruh Oh')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signInSuccess data is:', data)
@@ -68,6 +69,5 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
-
 
 }
