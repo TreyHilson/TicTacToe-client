@@ -2,11 +2,22 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 let turn = true
 let play = true
-
+const gameData = function (index, value, over) {
+return {
+    'game': {
+      'cell': {
+        'index': index,
+        'value': value
+      },
+      'over': over
+    }
+}
+}
 
 // Add a click handler for when a space on the game board is clicked
 // If the user clicks on a valid space then add their X or O
 const gameBoard = ['', '', '', '', '', '', '', '', '']
+
 const restart = function () {
   for (let i = 0; i < 9; i++)
   { $('#' + i).text('')
@@ -17,20 +28,37 @@ const restart = function () {
   turn = true
 api.startGame('{}')
 .then(ui.newGameSuccess)
-.catch()
+.catch(ui.newGameFailure)
+  $('#board').removeClass()
+  $('#change-password').addClass('hidden')
+
+}
+const showChangePassword = function () {
+$('#change-password').removeClass()
+$('#board').addClass('hidden')
 }
 // create action to click listener
 const clickOn = function (event) {
   const id = event.target.id
-  // when its true = X , otherwise switch turn
+// play effects gameboard functionality
   if (play) {
+    // when its true = X , otherwise switch turn
     if (turn === true) {
       if (gameBoard[id] === '') {
         gameBoard[id] = 'X'
         $('#' + id).text('X')
+        $('#' + id).addClass('xmen')
+        api.updateGame(gameData(id, 'X', !play))
+          .then(ui.goodMove)
+          .catch(ui.badMove)
+
         if (winnerX(gameBoard)) {
           $('#message').text('X Wins the Game!!!')
+
           play = false
+          api.updateGame(gameData(id, 'X', !play))
+            .then(ui.goodMove)
+            .catch(ui.badMove)
         }
         turn = false
       }
@@ -38,7 +66,11 @@ const clickOn = function (event) {
     else {
       if (gameBoard[id] === '') {
         gameBoard[id] = 'O'
-        $('#' + id).text('O')
+        $('#' + id).html('O')
+        $('#' + id).addClass('oreo')
+        api.updateGame(gameData(id, 'O', !play))
+          .then(ui.goodMove)
+          .catch(ui.badMove)
         if (winnerO(gameBoard)) {
           $('#message').text('O Wins the Game!!!')
           play = false
@@ -48,6 +80,13 @@ const clickOn = function (event) {
     }
   }
 }
+// function for scoreCard
+const scoreCard = function () {
+api.scoreCard()
+.then(ui.onScoreSuccessful)
+.catch(ui.onScoreFailure)
+}
+
 // GameBoard ID
 // [0, 1, 2]
 // [3, 4, 5]
@@ -65,7 +104,6 @@ const winnerX = function (arr) {
 }
 
 const winnerO = function (arr) {
-  console.log('testing' + arr)
   if (arr[0] === 'O' && arr[1] === 'O' && arr[2] === 'O') { return true }
   if (arr[3] === 'O' && arr[4] === 'O' && arr[5] === 'O') { return true }
   if (arr[6] === 'O' && arr[7] === 'O' && arr[8] === 'O') { return true }
@@ -85,6 +123,9 @@ module.exports = {
   ui,
   clickOn,
   gameBoard,
-  restart
+  restart,
+  showChangePassword,
+  scoreCard
+
 
 }

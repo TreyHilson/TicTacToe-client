@@ -20,7 +20,8 @@ const signInSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#firstView').addClass('hidden')
-    $('#board').removeClass()
+$('#navigation').removeClass()
+
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }
@@ -50,11 +51,16 @@ const signOutSuccess = function (data) {
   $('#message').text('SUCCESS 🤓')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#board').addClass('hidden')
+  $('#change-password').addClass('hidden')
+  $('#firstView').removeClass()
+$('#navigation').addClass('hidden')
+
   console.log('signInSuccess data is:', data)
   store.user = data.user
 }
 const signOutFailure = function (data) {
-  $('#message').text('Ruh Oh')
+  $('#message').text()
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signInSuccess data is:', data)

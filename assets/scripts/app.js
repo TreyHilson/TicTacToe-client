@@ -3,7 +3,7 @@
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
-const game = require('/Users/treyhilson/SEI/projects/TicTacToe-client/assets/scripts/events.js')
+const game = require('./events.js')
 const authEvents = require('./auth/events.js')
 
 
@@ -14,7 +14,9 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('submit', authEvents.onSignOut)
   $('#container').on('click', game.clickOn)
   $('#restart').on('click', game.restart)
+  $('#newPassword').on('click', game.showChangePassword)
+  $('#signout').on('click', authEvents.onSignOut)
+  $('#ScoreButton').on('click', game.scoreCard)
 })

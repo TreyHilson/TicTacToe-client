@@ -15,7 +15,19 @@
     <!-- Grid Layout -->
 <h1> Tic Tac Toe</h1>
     <!-- Grid Layout -->
+  <nav id="navigation" class="hidden">
+     <button id="restart">New Game</button>
+      <button id="signout" class="border"> Sign Out </button>
+      <button id="newPassword"> Change Password </button>
+      <button id="ScoreButton"> ScoreCard </button>
+    </nav>
+
+<br>
+<br>
+<br>
+
 <div id="board" class="hidden">
+
 <div id="container" class="container">
   <div class="row">
     <div id="0" class="col-4  box">
@@ -50,9 +62,12 @@
 
     <!-- Grid Layout -->
 <div>
-<button id="restart">Reset</button>
-</div>
 
+</div>
+<br>
+<br>
+<div id="scoreBoard" class="hidden">
+  <div id="lineOne" class="line-one"></div>  </div>
 <p id="message" class="mailman"></p>
 
 <div id="firstView">
@@ -81,7 +96,7 @@
 </form>
 </div>
 
-<form id="change-password" class="border">
+<form id="change-password" class="hidden">
   <fieldset>
     <legend> CHANGE PASSWORD </legend>
     <input type="text" name="passwords[old]" placeholder="Old password">
@@ -92,12 +107,8 @@
   </fieldset>
 </form>
 
-<form id="signout" class="border">
-  <fieldset>
-    <input type="submit" value="Sign Out">
 
 
-  </fieldset>
 </form>
   </body>
     </html>
