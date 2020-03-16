@@ -11,7 +11,7 @@ return {
       },
       'over': over
     }
-}
+  }
 }
 
 // Add a click handler for when a space on the game board is clicked
@@ -26,21 +26,20 @@ const restart = function () {
   }
   play = true
   turn = true
-api.startGame('{}')
-.then(ui.newGameSuccess)
-.catch(ui.newGameFailure)
+  api.startGame('{}')
+    .then(ui.newGameSuccess)
+    .catch(ui.newGameFailure)
   $('#board').removeClass()
-  $('#change-password').addClass('hidden')
+  $('#change-password').addClass('hidden') }
 
-}
 const showChangePassword = function () {
-$('#change-password').removeClass()
-$('#board').addClass('hidden')
+  $('#change-password').removeClass()
+  $('#board').addClass('hidden')
 }
 // create action to click listener
 const clickOn = function (event) {
   const id = event.target.id
-// play effects gameboard functionality
+  // play effects gameboard functionality
   if (play) {
     // when its true = X , otherwise switch turn
     if (turn === true) {
@@ -51,7 +50,9 @@ const clickOn = function (event) {
         api.updateGame(gameData(id, 'X', !play))
           .then(ui.goodMove)
           .catch(ui.badMove)
-
+          if (tie(gameBoard) === true) {
+          $('#message').text('ITS A TIE GAME!!!')
+          }
         if (winnerX(gameBoard)) {
           $('#message').text('X Wins the Game!!!')
 
@@ -71,6 +72,10 @@ const clickOn = function (event) {
         api.updateGame(gameData(id, 'O', !play))
           .then(ui.goodMove)
           .catch(ui.badMove)
+          if (tie(gameBoard) === true) {
+          $('#message').text('ITS A TIE GAME!!!')
+          }
+
         if (winnerO(gameBoard)) {
           $('#message').text('O Wins the Game!!!')
           play = false
@@ -79,7 +84,10 @@ const clickOn = function (event) {
       }
     }
   }
+
 }
+
+
 // function for scoreCard
 const scoreCard = function () {
 api.scoreCard()
@@ -104,7 +112,6 @@ const winnerX = function (arr) {
 }
 
 const winnerO = function (arr) {
-  if (arr[0] === 'O' && arr[1] === 'O' && arr[2] === 'O') { return true }
   if (arr[3] === 'O' && arr[4] === 'O' && arr[5] === 'O') { return true }
   if (arr[6] === 'O' && arr[7] === 'O' && arr[8] === 'O') { return true }
   if (arr[0] === 'O' && arr[3] === 'O' && arr[6] === 'O') { return true }
@@ -115,7 +122,15 @@ const winnerO = function (arr) {
   if (arr[6] === 'O' && arr[4] === 'O' && arr[2] === 'O') { return true }
   return false
 }
-
+// a tie is winning arrays if they are not empty
+const tie = function (arr) {
+  for (let tie = 0; tie < 9; tie++) {
+    if (arr[tie] === '') {
+      return false
+    }
+  }
+  return true
+}
 // add winning arrays etc
 
 module.exports = {
@@ -125,7 +140,9 @@ module.exports = {
   gameBoard,
   restart,
   showChangePassword,
-  scoreCard
+  scoreCard,
+  tie
+
 
 
 }

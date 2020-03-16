@@ -34,7 +34,7 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
+  $('#message').text('PASSWORD CHANGED')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('Change password data is:', data)
