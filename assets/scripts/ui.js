@@ -4,6 +4,7 @@ const newGameSuccess = function (data) {
   $('#message').html('New Game Started || Click any square to begin!')
   $('#message').removeClass()
   $('#message').addClass('message')
+  $('#pika').addClass('hidden')
   store.game = data.game
   console.log('TESTTEST  = ', data.game)
 }
