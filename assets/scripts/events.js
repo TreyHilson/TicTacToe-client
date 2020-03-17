@@ -43,6 +43,7 @@ const clickOn = function (event) {
   if (play) {
     // when its true = X , otherwise switch turn
     if (turn === true) {
+      $('#message').html('PLAYER O TURN')
       if (gameBoard[id] === '') {
         gameBoard[id] = 'X'
         $('#' + id).text('X')
@@ -50,12 +51,12 @@ const clickOn = function (event) {
         api.updateGame(gameData(id, 'X', !play))
           .then(ui.goodMove)
           .catch(ui.badMove)
-          if (tie(gameBoard) === true) {
+        if (tie(gameBoard) === true) {
           $('#message').text('ITS A TIE GAME!!!')
-          }
+        }
         if (winnerX(gameBoard)) {
           $('#message').text('X Wins the Game!!!')
-            $('#L').addClass('hidden')
+          $('#L').addClass('hidden')
           $('#pika').removeClass()
           play = false
           api.updateGame(gameData(id, 'X', !play))
@@ -64,32 +65,38 @@ const clickOn = function (event) {
         }
         turn = false
       }
+      else{
+        ui.badMove()
+      }
     }
+    // Data for O variations
     else {
       if (gameBoard[id] === '') {
+        $('#message').html('PLAYER X TURN')
         gameBoard[id] = 'O'
         $('#' + id).html('O')
         $('#' + id).addClass('oreo')
         api.updateGame(gameData(id, 'O', !play))
           .then(ui.goodMove)
           .catch(ui.badMove)
-          if (tie(gameBoard) === true) {
+        if (tie(gameBoard) === true) {
           $('#message').text('ITS A TIE GAME!!!')
-          }
+        }
 
         if (winnerO(gameBoard)) {
           $('#message').text('O Wins the Game!!!')
-                $('#L').addClass('hidden')
-            $('#pika').removeClass()
+          $('#L').addClass('hidden')
+          $('#pika').removeClass()
           play = false
         }
         turn = true
       }
+      else {ui.badMove()}
+
+
     }
   }
-
 }
-
 
 // function for scoreCard
 const scoreCard = function () {
@@ -134,6 +141,8 @@ const tie = function (arr) {
   }
   return true
 }
+
+
 // add winning arrays etc
 
 module.exports = {

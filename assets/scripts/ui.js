@@ -1,14 +1,14 @@
 const store = require('./store')
 
 const newGameSuccess = function (data) {
-  $('#message').html('New Game Started!')
+  $('#message').html('New Game Started || Click any square to begin!')
   $('#message').removeClass()
   $('#message').addClass('message')
   store.game = data.game
   console.log('TESTTEST  = ', data.game)
 }
 
-const newGameFailure = function (date) {
+const newGameFailure = function (data) {
   $('#message').html('New Game Failed!')
   $('#message').removeClass()
   $('#message').addClass('message')
@@ -17,9 +17,13 @@ const newGameFailure = function (date) {
 const goodMove = function (data) {
 
 }
+const badMove = function () {
+  $('#message').html('SQUARE ALREADY PLAYED')
+  setTimeout(() => $('#message').text(''), 1300)
+}
 
 const onScoreSuccessful = function (data) {
-  $('#lineOne').html('TOTAL GAMES PLAYED:' + data.games.length)
+  $('#lineOne').html('TOTAL GAMES PLAYED: ' + data.games.length)
   $('#scoreBoard').removeClass()
 }
 
@@ -33,6 +37,7 @@ module.exports = {
   newGameFailure,
   goodMove,
   onScoreSuccessful,
-  onScoreFailure
+  onScoreFailure,
+  badMove
 
 }
