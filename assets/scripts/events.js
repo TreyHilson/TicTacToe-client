@@ -91,7 +91,7 @@ const clickOn = function (event) {
         }
         turn = true
       }
-      else {ui.badMove()}
+      else { ui.badMove() }
 
 
     }
@@ -132,7 +132,7 @@ const winnerO = function (arr) {
   if (arr[6] === 'O' && arr[4] === 'O' && arr[2] === 'O') { return true }
   return false
 }
-// a tie is winning arrays if they are not empty
+// a tie - arrays if they are not empty
 const tie = function (arr) {
   for (let tie = 0; tie < 9; tie++) {
     if (arr[tie] === '') {
