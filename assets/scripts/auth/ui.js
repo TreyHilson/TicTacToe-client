@@ -48,7 +48,7 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
+  $('#message').text('SIGNED OUT SUCCESSFULLY')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#board').addClass('hidden')

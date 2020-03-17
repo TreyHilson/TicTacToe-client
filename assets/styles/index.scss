@@ -12,6 +12,15 @@ body {
   margin-top: 10px;
   background-color: #00b3ff;
   text-align: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+input {
+  width: 60%;
+}
+
+input:hover {
+  background-color: #c5c8ff;
 }
 
 
@@ -59,6 +68,11 @@ button {
   padding: 20px;
   font-size: 20px;
   margin-top: 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #bcbcf2
 }
 
 

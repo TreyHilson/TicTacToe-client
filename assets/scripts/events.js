@@ -55,7 +55,8 @@ const clickOn = function (event) {
           }
         if (winnerX(gameBoard)) {
           $('#message').text('X Wins the Game!!!')
-
+            $('#L').addClass('hidden')
+          $('#pika').removeClass()
           play = false
           api.updateGame(gameData(id, 'X', !play))
             .then(ui.goodMove)
@@ -78,6 +79,8 @@ const clickOn = function (event) {
 
         if (winnerO(gameBoard)) {
           $('#message').text('O Wins the Game!!!')
+                $('#L').addClass('hidden')
+            $('#pika').removeClass()
           play = false
         }
         turn = true
