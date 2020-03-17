@@ -12,6 +12,8 @@ const signUpFailure = function () {
   $('#message').text('NOOB FAIL 😫')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  $('#sign-up').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 }
 
 const signInSuccess = function (data) {
