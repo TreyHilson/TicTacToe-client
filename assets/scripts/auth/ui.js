@@ -34,10 +34,9 @@ const changePasswordSuccess = function (data) {
   $('#message').text('PASSWORD CHANGED')
   $('#message').removeClass()
   $('#change-password').addClass('hidden')
-
-
+  $('#change-password').closest('form').find('input[type=text], textarea').val('')
+  $('#change-password').closest('form').find('input[type=password], textarea').val('')
 }
-
 const changePasswordFailure = function () {
   $('#message').text('NOOB FAIL 😫')
   $('#message').removeClass()
