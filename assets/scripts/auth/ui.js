@@ -28,6 +28,8 @@ const signInFailure = function () {
   $('#message').text('NOOB FAIL 😫')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  $('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 
 const changePasswordSuccess = function (data) {
