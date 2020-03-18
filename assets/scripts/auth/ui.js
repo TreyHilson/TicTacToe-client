@@ -5,6 +5,8 @@ const signUpSuccess = function (data) {
   $('#message').text('SUCCESS 🤓')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#sign-up').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 
 }
 
@@ -45,6 +47,8 @@ const changePasswordFailure = function () {
   $('#message').text('NOOB FAIL 😫')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  $('#change-password').closest('form').find('input[type=text], textarea').val('')
+  $('#change-password').closest('form').find('input[type=password], textarea').val('')
 }
 
 const signOutSuccess = function (data) {

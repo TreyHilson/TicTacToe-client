@@ -65,7 +65,7 @@ const clickOn = function (event) {
         }
         turn = false
       }
-      else{
+      else {
         ui.badMove()
       }
     }
