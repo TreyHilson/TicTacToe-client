@@ -26,6 +26,7 @@ const badMove = function () {
 const onScoreSuccessful = function (data) {
   $('#lineOne').html('TOTAL GAMES PLAYED: ' + data.games.length)
   $('#scoreBoard').removeClass()
+    $('#lineOne').removeClass()
 }
 
 

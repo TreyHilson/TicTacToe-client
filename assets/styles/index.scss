@@ -47,7 +47,20 @@ cursor: pointer;
   font-weight: bolder;
 }
 
-.message {
+#message {
+  color: #c5c8ff;
+  font-size: 33px;
+  font-weight: bolder;
+}
+
+#scoreBoard {
+  color: $thirdcolor;
+  font-size: 33px;
+  font-weight: bolder;
+
+}
+
+#lineOne {
   color: $thirdcolor;
   font-size: 33px;
   font-weight: bolder;

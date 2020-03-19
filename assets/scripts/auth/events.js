@@ -31,7 +31,6 @@ const onChangePassword = function (event) {
 }
 
 const onSignOut = function (event) {
-  event.preventDefault()
 
   const data = getFormFields(event.target)
   api.signOut(data)

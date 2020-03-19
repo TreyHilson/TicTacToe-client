@@ -7,7 +7,6 @@ const signUpSuccess = function (data) {
   $('#message').addClass('success')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
-
 }
 
 const signUpFailure = function () {
@@ -23,7 +22,10 @@ const signInSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#firstView').addClass('hidden')
+  $('#sign-up').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 $('#navigation').removeClass()
+
 
   store.user = data.user
 }
@@ -58,16 +60,18 @@ const signOutSuccess = function (data) {
   $('#board').addClass('hidden')
   $('#change-password').addClass('hidden')
   $('#firstView').removeClass()
-  $('#sign-in').closest('form').find('input[type=text], textarea').val('')
-  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
   $('#navigation').addClass('hidden')
   $('#scoreBoard').addClass('hidden')
   $('#lineOne').addClass('hidden')
+  $('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 const signOutFailure = function (data) {
   $('#message').text()
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 
 module.exports = {

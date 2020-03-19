@@ -16,6 +16,10 @@ return {
 
 // Add a click handler for when a space on the game board is clicked
 // If the user clicks on a valid space then add their X or O
+// GameBoard ID
+// [0, 1, 2]
+// [3, 4, 5]
+// [6, 7, 8]
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 const restart = function () {
@@ -47,10 +51,12 @@ const clickOn = function (event) {
       if (gameBoard[id] === '') {
         gameBoard[id] = 'X'
         $('#' + id).text('X')
+        // adding class for future styling
         $('#' + id).addClass('xmen')
         api.updateGame(gameData(id, 'X', !play))
           .then(ui.goodMove)
           .catch(ui.badMove)
+          // run tie function through gamboard array to see if game is a tie
         if (tie(gameBoard) === true) {
           $('#message').text('ITS A TIE GAME!!!')
         }
@@ -92,8 +98,6 @@ const clickOn = function (event) {
         turn = true
       }
       else { ui.badMove() }
-
-
     }
   }
 }
@@ -154,7 +158,4 @@ module.exports = {
   showChangePassword,
   scoreCard,
   tie
-
-
-
 }
