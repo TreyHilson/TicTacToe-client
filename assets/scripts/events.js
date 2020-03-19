@@ -126,6 +126,7 @@ const winnerX = function (arr) {
 }
 
 const winnerO = function (arr) {
+  if (arr[0] === 'O' && arr[1] === 'O' && arr[2] === 'O') { return true }
   if (arr[3] === 'O' && arr[4] === 'O' && arr[5] === 'O') { return true }
   if (arr[6] === 'O' && arr[7] === 'O' && arr[8] === 'O') { return true }
   if (arr[0] === 'O' && arr[3] === 'O' && arr[6] === 'O') { return true }
