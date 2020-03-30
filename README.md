@@ -1,8 +1,7 @@
 # Tic-Tac-Toe Game Project
 ENJOY THE GAME HERE: 
-https://treyhilson.github.io/TicTacToe-client/
-https://treyhilson.github.io/TicTacToe-client/
-https://treyhilson.github.io/TicTacToe-client/
+#### https://treyhilson.github.io/TicTacToe-client/ ####
+
 
 A game in which two players alternately put Xs and Os in compartments of a figure
  formed by two vertical lines crossing two horizontal lines and each tries to get
