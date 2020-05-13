@@ -104,9 +104,9 @@ const clickOn = function (event) {
 
 // function for scoreCard
 const scoreCard = function () {
-api.scoreCard()
-.then(ui.onScoreSuccessful)
-.catch(ui.onScoreFailure)
+  api.scoreCard()
+    .then(ui.onScoreSuccessful)
+    .catch(ui.onScoreFailure)
 }
 
 // GameBoard ID

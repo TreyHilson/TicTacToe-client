@@ -22,6 +22,12 @@ https://imgur.com/4P7UNW0 || https://imgur.com/CdWt2Mi
 * As a user, I want to be able to change my password,
 * As a user, I want to have the ability to sign out.
 
+<img src="images/tictac1.png" width="800">
+
+<img src="images/tictac2.png" width="800">
+
+<img src="images/tictac3.png" width="800">
+
 ## Technologies Used
 
   * JavaScript
@@ -34,8 +40,8 @@ https://imgur.com/4P7UNW0 || https://imgur.com/CdWt2Mi
 
 
 ## Development
-
-  Creating a Tic Tac Toe game is my project 0 with General Assembly.
+<p>
+Creating a Tic Tac Toe game is my project 0 with General Assembly.
 I had never created a full front end functioning game before, and I
 really enjoyed the process. Hours of problem solving enticed me to keep
 learning more and to do better.
@@ -43,8 +49,9 @@ As you can see from my wireframe the design changed the more I focused on
 functionality.
 For example, I put "forgot password" on the button in my wireframe
 design, but there was no need, only "change password" was needed.
-Currently the game plays well for ver 1.0!
+Currently the game plays well for ver 1.0!</p>
 
   ---*---
-  In version 2.0 I would like to create an intuitive feeling AI
-  I'd like to style more and expirement more with CSS.
+  In version 2.0
+  I would like to create an intuitive feeling AI
+  User can access how man wins & losses. 

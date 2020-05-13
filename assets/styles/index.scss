@@ -48,7 +48,7 @@ cursor: pointer;
 }
 
 #message {
-  color: #c5c8ff;
+  color: $thirdcolor;
   font-size: 33px;
   font-weight: bolder;
 }
@@ -91,4 +91,8 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+iframe {
+    pointer-events: none
 }

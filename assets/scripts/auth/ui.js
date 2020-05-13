@@ -2,7 +2,7 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
+  $('#message').text('SUCCESS 🌵')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
@@ -10,7 +10,7 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
+  $('#message').text('NOOB FAIL 💩')
   $('#message').removeClass()
   $('#message').addClass('failure')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
@@ -18,7 +18,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
+  $('#message').text('SUCCESS 🌵')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#firstView').addClass('hidden')
@@ -27,11 +27,12 @@ const signInSuccess = function (data) {
 $('#navigation').removeClass()
 
 
+
   store.user = data.user
 }
 
 const signInFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
+  $('#message').text('NOOB FAIL 💩')
   $('#message').removeClass()
   $('#message').addClass('failure')
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
@@ -46,7 +47,7 @@ const changePasswordSuccess = function (data) {
   $('#change-password').closest('form').find('input[type=password], textarea').val('')
 }
 const changePasswordFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
+  $('#message').text('NOOB FAIL 💩')
   $('#message').removeClass()
   $('#message').addClass('failure')
   $('#change-password').closest('form').find('input[type=text], textarea').val('')
